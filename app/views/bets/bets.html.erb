@@ -1,0 +1,15 @@
+
+<body class="col-sm-3">
+<h1>Template to render the data</h1>
+<!-- Dont forget to change the time from UTC to EST -->
+<!-- Try to render this data in bootstrap column grid-->
+
+<% @filtered_arrays.each do |array| %>
+
+  <div style="display: inline-block;" class="form-group">
+    <p class="form-control"> <%= image_tag("curry.png")  %></p>
+    <p class="form-control" style="width: 70%; text-align: center;" ="c"><%= array %></p>
+  </div>
+
+<% end %>
+</body>
