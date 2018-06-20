@@ -1,15 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="container" style="color: lightgreen; background-color: lightgreen;">
+  <h1 style="text-align: center; font-size: 5rem;color: blue;">Players</h1>
 
-<body class="col-sm-3">
-<h1>Template to render the data</h1>
-<!-- Dont forget to change the time from UTC to EST -->
-<!-- Try to render this data in bootstrap column grid-->
-
-<% @filtered_arrays.each do |array| %>
-
-  <div style="display: inline-block;" class="form-group">
-    <p class="form-control"> <%= image_tag("curry.png")  %></p>
-    <p class="form-control" style="width: 70%; text-align: center;" ="c"><%= array %></p>
+  <div class="row">
+    <%  @filtered_arrays.each do |array| %>
+      <div class="col-sm-3" style="background-color: blueviolet; border-radius: 90px;     border-right-style: inset;
+    border-bottom-style: inset;">
+        <p><%= image_tag("curry.png",  :style=>" width: 325px; position: relative; right: 30px;")  %></p>
+        <p class="palyers" style="margin-left: 24px; font-weight: 600;"><%= array %></p>
+      </div>
+    <% end %>
   </div>
-
-<% end %>
 </body>
+</html>
